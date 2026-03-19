@@ -7,10 +7,10 @@
     grid-template-rows: auto 3fr 1fr;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
-        "logo    menu    menu    menu"
-        "hero    hero    hero    sidebar"
-        "karta1  karta2  karta3  sidebar"
-        "footer  footer  footer  footer";
+        "logo menu menu menu"
+        "hero hero hero sidebar"
+        "karta1 karta2 karta3 sidebar"
+        "footer footer footer footer";
 }
 .box{
     background-color: rgb(28, 183, 255);
