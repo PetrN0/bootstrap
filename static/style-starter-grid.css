@@ -1,11 +1,16 @@
-.container{
-    margin: 0px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+.container {
+    margin: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     display: grid;
     gap: 10px;
-    grid-template-rows: repeat(6, 4fr);
+    grid-template-rows: auto 3fr 1fr;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "logo    menu    menu    menu"
+        "hero    hero    hero    sidebar"
+        "karta1  karta2  karta3  sidebar"
+        "footer  footer  footer  footer";
 }
 .box{
     background-color: rgb(28, 183, 255);
@@ -15,46 +20,27 @@
     border-radius: 8px;
 }
 
-.box:nth-child(1){
-    grid-column: span 1;
-}
 
-.box:nth-child(2){
-    grid-column: span 3;
-}
-.box:nth-child(3){
-    grid-column: span 3;
-    grid-row: span 2;
-}
-.box:nth-child(7){
-    grid-column: span 1;
-    grid-row: span 2;
-}
-.box:nth-child(5){
-    grid-column: span 1;
-    grid-row: span 2;
-}
-.box:nth-child(6){
-    grid-column: span 1;
-    grid-row: span 2;
-}
-.box:nth-child(4){
-    grid-column: span 1;
-    grid-row: span 4;
-}.box:nth-child(8){
-    grid-column: span 4;
-}
-@media (max-width:900px){
-    .container{
+.box1 { grid-area: logo; }
+.box2 { grid-area: menu; background-color: rgb(83, 43, 226);}
+.box3 { grid-area: hero;   background-color: rgb(233, 72, 160);}
+.box4 { grid-area: karta1;  background-color: rgb(226, 137, 19);}
+.box5 { grid-area: karta2;  background-color: rgb(237, 250, 188);}
+.box6 { grid-area: karta3;  background-color: rgb(109, 241, 250);}
+.box7 { grid-area: sidebar; background-color: rgb(78, 197, 98);}
+.box8 { grid-area: footer;  background-color: rgb(43, 144, 226);}
+
+@media (max-width: 900px) {
+    .container {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-
-    }
-    .box{
-        background-color: rgb(28, 183, 255);
-        padding: 20px;
-        text-align: center; 
-        border:solid 2px rgb(9, 24, 245);
-        border-radius: 8px;
+        grid-template-areas:
+            "logo"
+            "menu"
+            "hero"
+            "sidebar"
+            "karta1"
+            "karta2"
+            "karta3"
+            "footer";
     }
 }
