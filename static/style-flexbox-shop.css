@@ -32,7 +32,15 @@ body{
     padding: 10px 10px;
     cursor: pointer;
     flex-direction: row;
+    flex: 1;            
+    margin-top: 0;   
 }
+.card-actions {
+    display: flex;      
+    gap: 10px;          
+    margin-top: auto;  
+}
+
 .btn-detail{
     background-color: rgb(207, 181, 209);
     color: white;
@@ -42,6 +50,8 @@ body{
     cursor: pointer;
     margin-top: auto;
     flex-direction: row;
+    flex: 1;            
+    margin-top: 0;   
 }
 
 .price{
